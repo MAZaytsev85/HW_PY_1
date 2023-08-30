@@ -17,4 +17,4 @@ for i in arr:
 print(f"{coin_count} -> столько монет необходимо перевернуть")
 
 
-#for commit
+#for commit 1
