@@ -4,22 +4,25 @@
 # Помогите Кате отгадать задуманные Петей числа.
 
 # X + Y = S
-# X*Y = P -> X*(S - X) = P -> -X*X + S*X - P = 0
-# a*x**2 + b*x + c = 0; a = -1; b = S; c = -P.
+# X * Y = P -> X * (S - X) = P -> -X * X + S * X - P = 0
+# a * x ** 2 + b * x + c = 0; a = -1; b = S; c = -P.
 
-import math
+from math import sqrt
 
-S = 5
-P = 6
+S = int(input("Сумма загаданных чисел "))
+P = int(input("Произведение загаданных чисел "))
 
 discr = S ** 2 - 4 * P
 
 if discr > 0:
-    X = (-S + math.sqrt(discr)) / -2
-    Y = (-S - math.sqrt(discr)) / -2
+    X = (-S + sqrt(discr)) / -2
+    Y = (-S - sqrt(discr)) / -2
     print(X, Y)
 elif discr == 0:
     X = -S / -2
     print(X)
 else:
     print("Корней нет")
+
+
+#for commit
